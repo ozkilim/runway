@@ -1,0 +1,15 @@
+# Never commit credentials or real config
+config.yaml
+credentials.yaml
+*.pem
+service-account*.json
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store

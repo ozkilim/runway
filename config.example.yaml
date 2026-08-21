@@ -1,0 +1,56 @@
+# runway configuration
+#
+# Copy this file to ~/.runway/config.yaml and lock it down:
+#
+#   mkdir -p ~/.runway && chmod 700 ~/.runway
+#   cp config.example.yaml ~/.runway/config.yaml && chmod 600 ~/.runway/config.yaml
+#
+# Then follow docs/setup/<provider>.md for each cloud you use.
+#
+# About credits / credits_as_of / expires:
+# No cloud exposes a remaining-credit balance via API. So you read `credits` and
+# `expires` off the provider's console Credits page ONCE, and record the date you
+# did that as `credits_as_of`. runway then computes:
+#
+#     remaining = credits - drawdown measured since credits_as_of
+#
+# credits_as_of is LOAD-BEARING. If the console said "$10,000 remaining" on
+# 2026-01-15, then credits: 10000 and credits_as_of: 2026-01-15. Measuring from an
+# earlier date double-counts spend; a later date misses spend. Get it right once
+# and never touch it again (unless the grant changes - then update both).
+
+aws:
+  enabled: false
+  # IAM user with the minimal policy from docs/setup/aws.md (Cost Explorer read + STS).
+  access_key_id: "YOUR_AWS_ACCESS_KEY_ID"
+  secret_access_key: "YOUR_AWS_SECRET_ACCESS_KEY"
+  region: "us-east-1"
+  # From the console: Billing -> Credits
+  credits: 10000
+  credits_as_of: 2026-01-01
+  expires: 2027-12-31
+
+azure:
+  enabled: false
+  # Service principal with Cost Management Reader on the subscription
+  # (docs/setup/azure.md). NOTE: sponsorship offers are invisible to this API -
+  # read the doc before enabling.
+  tenant_id: "YOUR_AZURE_TENANT_ID"
+  client_id: "YOUR_AZURE_CLIENT_ID"
+  client_secret: "YOUR_AZURE_CLIENT_SECRET"
+  subscription_id: "YOUR_AZURE_SUBSCRIPTION_ID"
+  credits: 5000
+  credits_as_of: 2026-01-01
+  expires: 2026-12-31
+
+gcp:
+  enabled: false
+  # Service account json + BigQuery billing export (docs/setup/gcp.md).
+  # The export does NOT backfill - credits_as_of must be on/after the day you
+  # enabled it.
+  service_account_json: "/path/to/service-account.json"
+  project_id: "your-gcp-project-id"
+  billing_table: "your-project.billing_export.gcp_billing_export_v1_XXXXXX_XXXXXX_XXXXXX"
+  credits: 3000
+  credits_as_of: 2026-01-01
+  expires: 2026-12-31

@@ -1,0 +1,12 @@
+# Core (always needed)
+pyyaml>=6.0
+
+# AWS
+boto3>=1.34
+
+# Azure (uncomment if you enable the azure provider)
+# azure-identity>=1.15
+# azure-mgmt-costmanagement>=4.0
+
+# GCP (uncomment if you enable the gcp provider)
+# google-cloud-bigquery>=3.14
