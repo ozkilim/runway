@@ -7,22 +7,9 @@ console is four logins away and lies to you anyway (credit-funded accounts read
 $0.00 in the obvious places). runway pulls live credit + spend facts from the
 cloud billing APIs and puts them one question away from wherever you already are:
 
-```
-you:    what's my burn?
-
-agent:    CLOUD SPEND                                          2026-08-21 09:14
-
-          AWS  ...4242
-            granted  $10,000.00    used   $6,120.40 (61.2%)    left   $3,879.60 (38.8%)
-            since    2026-01-01    expires  2027-06-30 (313d)    cash $0.00
-          90d   Bedrock $2,911.07 | EC2 $801.22 | S3 $175.65 | VPC $10.79
-          mo    2026-02 $310.55 | 2026-03 $334.10 | 2026-04 $381.90 | 2026-05 $492.03
-                2026-06 $2,940.12 | 2026-07 $421.25 | 2026-08 $240.45*
-
-          azure, gcp: not configured
-
-          The June spike was Bedrock — $2,911 of the 90-day total.
-```
+<p align="center">
+  <img src="assets/demo.gif" alt="terminal demo: asking 'what's my burn?' and getting a live cloud spend table" width="820">
+</p>
 
 Facts only. No forecasts, no traffic lights, no "insights". Your agent reads the
 same numbers you do and only speaks up when something genuinely warrants it.
