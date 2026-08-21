@@ -2,10 +2,14 @@
   <img src="assets/hero.jpg" alt="runway — see your cloud runway without leaving your coding agent">
 </p>
 
-You're a CTO / VP Eng / founder with cloud credits burning down. The billing
-console is four logins away and lies to you anyway (credit-funded accounts read
-$0.00 in the obvious places). runway pulls live credit + spend facts from the
-cloud billing APIs and puts them one question away from wherever you already are:
+You're a CTO / VP Eng / founder with cloud credits burning down. Checking on them
+is four logins and a 2FA prompt away — *every single time* — and when you finally
+get there, the console lies to you anyway (credit-funded accounts read $0.00 in
+the obvious places). So nobody checks. Tracking this stuff is a pain in the ass,
+and the number at the end of that pain is probably going to hurt 😉 — the least we
+can do is make it painless to look at. runway pulls live credit + spend facts from
+the cloud billing APIs and puts them one question away from wherever you already
+are:
 
 <p align="center">
   <img src="assets/demo.gif" alt="terminal demo: asking 'what's my burn?' and getting a live cloud spend table" width="820">
@@ -74,7 +78,8 @@ runway.py --config /path/to/config.yaml
 
 ## FAQ
 
-**Why not just open the billing console?** You will not. That's the whole point.
+**Why not just open the billing console?** Four logins, a 2FA prompt, and three
+console menus deep — every single time. You will not. That's the whole point.
 
 **Why is `credits_as_of` so important?** Remaining = credits − drawdown since that
 date. The console told you a balance on a specific day; measure from any other day
