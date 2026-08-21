@@ -2,8 +2,6 @@
   <img src="assets/hero.jpg" alt="runway — see your cloud runway without leaving your coding agent">
 </p>
 
-**See your cloud runway without leaving your coding agent.**
-
 You're a CTO / VP Eng / founder with cloud credits burning down. The billing
 console is four logins away and lies to you anyway (credit-funded accounts read
 $0.00 in the obvious places). runway pulls live credit + spend facts from the
