@@ -1,4 +1,6 @@
-# 🛫 runway
+<p align="center">
+  <img src="assets/logo.png" width="380" alt="runway — see your cloud runway without leaving your coding agent">
+</p>
 
 **See your cloud runway without leaving your coding agent.**
 
